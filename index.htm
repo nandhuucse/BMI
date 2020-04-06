@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!--bootstrap css cdn-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <style>
+       
+</style>
+</head>
+
+<body onload="mode()">
+    <div class="main-div h-auto">
+        <div class="inner-wrap">
+        <div class="inner-div position-relative h-100 w-100">
+            <div class="top-div py-4 px-4 d-flex align-items-center justify-content-between">
+                <i class="fas fa-bars" onclick="show()"></i>
+                <div class="date d-flex flex-column">
+                    <p class="do text-center"></p>
+                    <span class="day"></span>
+                </div>
+                <i class="fas fa-plus-circle" onclick="saveFunc()"></i>
+            </div>
+            <div class="box-div m-4 p-3">
+                <div class="data py-2 px-3">
+                    <h4 class="text-center">Body Mass Index</h4>
+                </div>
+                <div class="age my-3 d-flex align-items-center justify-content-between">
+                    <p>Age</p>
+                    <div class="icons age">
+                        <i class="fas fa-caret-left" onclick="decrement()" type="button"></i>
+                        <input type="number" name="age" onkeyup="myage()" id="incrementor">
+                        <i class="fas fa-caret-right"  onclick="increment()" type="button"></i>
+                    </div>
+                </div>
+                <div class="weight my-3 d-flex align-items-center justify-content-between">
+                    <p>Weight</p>
+                    <div class="icons weight">
+                        <i class="fas fa-caret-left" onclick="decreasing()" type="button"></i>
+                        <input type="number" name="weight" placeholder="(in kg)" onkeyup="myweight()" id="increment">
+                        <i class="fas fa-caret-right" onclick="increasing()" type="button"></i>
+                    </div>
+                </div>
+                <div class="growth my-3 d-flex align-items-center justify-content-between">
+                    <p>Growth</p>
+                    <div class="icons height">
+                        <i class="fas fa-caret-left" onclick="reduce()" type="button"></i>
+                        <input type="number" name="height" placeholder="(in m)" onkeyup="myheight(this)" id="increase">
+                        <i class="fas fa-caret-right" onclick="expand()" type="button"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="img-div px-5 py-3">
+                <img src="assets/images/workout.svg" style="max-height: 100%; max-width: 100%;">
+            </div>
+            <div class="display my-3 px-3">
+                <h4 class="heading text-center text-white">Your BMI is calculated here!</h4>
+                <p class="para text-white my-2 text-center"></p>
+            </div>
+            <div class="menu w-100 px-4">
+                <div class="icon w-100 h-100 d-flex align-items-center justify-content-between">
+                    <i class="fas fa-dumbbell"></i>
+                    <i class="fas fa-adjust"></i>
+                    <i class="fas fa-chart-bar" onclick="chartFunc()"></i>
+                </div>
+            </div>
+        </div>
+        <div class="toggle-div p-2">
+            <div class="arrow py-4 px-3 d-flex align-items-center justify-content-between">
+                <i class="fas fa-long-arrow-alt-left" onclick="show()"></i>
+                <p class="text">BMI</p>
+                
+                <select>
+                    <option>WEEK</option>
+                    <option>MONTH</option>
+                    <option>DAY</option>
+                </select>
+
+                <div class="calculus">
+                    <h5>Weight</h5>
+                    <p class="range">+236<br><span class="ml-3">kkal</span></p>
+                </div>
+
+                <div class="card">
+              
+                    <canvas id="myChart" height="250" width="290"></canvas>
+                     </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="assets/main.js"></script>
+</body>
+<script>
+    
+</script>
+</html>
